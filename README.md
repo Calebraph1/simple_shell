@@ -29,4 +29,4 @@ Tasks
 	 - Handle the $$ variable
 .Task 15 - Handle comments (#)
 .Task 16 - File as input
-.AUTHORS
+.AUTHORS [Idah Khumalo and Caleb Godwin]
