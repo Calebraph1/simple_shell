@@ -17,7 +17,11 @@ void execute_command(const char *command)
 	exit(0);
 	}
 
-	// Split the command into arguments
+	/* Create a non-const copy of the command */
+	char command_copy[BUFFER_SIZE];
+	strcpy(command_copy, command);
+
+	/* Split the command into arguments */
 	char *args[10];
 	char *token = strtok(command, " \t\n");
 	int i = 0;
@@ -27,6 +31,9 @@ void execute_command(const char *command)
 	i++;
 	}
 	args[i] = NULL;
+
+	/* create a non-const copy of the command */
+
 
 	// Fork a child process to execute the command
 	pid_t pid = fork();
