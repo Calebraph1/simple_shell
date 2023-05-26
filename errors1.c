@@ -4,26 +4,26 @@
  * _erratoi - converts a str to an int
  * @s: the str to be converted
  * Return: 0 if no nums in str, converted num otherwise
- *	-1 on error
+ * -1 on error
  */
 int _erratoi(char *s)
 {
-	int = 0;
+	int i = 0;
 	unsigned long int result = 0;
 
 	if (*s == '+')
-		s++; /* TODO:why does this make main return 255?*/
+	s++; /* TODO:why does this make main return 255?*/
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] >= '0' && s[i] <= '9')
-		{
-			result *= 10;
-			result += (s[i] - '0');
-			if (result > INT_MAX)
-				return (-1);
-		}
-		else
-			return (-1);
+	if (s[i] >= '0' && s[i] <= '9')
+	{
+	result *= 10;
+	result += (s[i] - '0');
+	if (result > INT_MAX)
+	return (-1);
+	}
+	else
+	return (-1);
 	}
 	return (result);
 }
@@ -33,7 +33,7 @@ int _erratoi(char *s)
  * @info: the parameter & return info struct
  * @estr: str containing specified error type
  * Return: 0 if no nums in str, converted num otherwise
- *	-1 on error
+ * -1 on error
  */
 void print_error(info_t *info, char *estr)
 {
@@ -59,23 +59,23 @@ int print_d(int input, int fd)
 	unsigned int _abs_, current;
 
 	if (fd == STDERR_FILENO)
-		__putchar = _eputchar;
+	__putchar = _eputchar;
 	if (input < 0)
 	{
-		_abs_ = -input;
-		count++;
+	_abs_ = -input;
+	count++;
 	}
 	else
-		_abs_ = input;
+	_abs_ = input;
 	current = _abs_;
 	for (i = 1000000000; i > 1; i /= 10)
 	{
-		if (_abs_ / i)
-		{
-			__putchar('0' + current / i);
-			count++;
-		}
-		current %= i;
+	if (_abs_ / i)
+	{
+	__putchar('0' + current / i);
+	count++;
+	}
+	current %= i;
 	}
 	__putchar('0' + current);
 	count++
@@ -100,8 +100,8 @@ char *convert_number(long int num, int base, int flags)
 
 	if (!(flags & CONVERT_UNSIGNED) && num < 0)
 	{
-		n = -num;
-		sign = '-';
+	n = -num;
+	sign = '-';
 	}
 	array = flags & CONVERT_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
 	ptr = &buffer[49];
@@ -113,7 +113,7 @@ char *convert_number(long int num, int base, int flags)
 	} while (n != 0);
 
 	if (sign)
-		*--ptr = sign;
+	*--ptr = sign;
 	return (ptr);
 }
 
@@ -128,9 +128,9 @@ void remove_comments(char *buf)
 	int i;
 
 	for (i = 0; buf[i] != '\0'; i++)
-		if (buf[i] == '#' && (!i || buf[i - 1] == ''))
-		{
-			buf[i] = '\0';
-			break;
-		}
+	if (buf[i] == '#' && (!i || buf[i - 1] == ''))
+	{
+	buf[i] = '\0';
+	break;
+	}
 }
