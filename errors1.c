@@ -78,7 +78,7 @@ int print_d(int input, int fd)
 	current %= i;
 	}
 	__putchar('0' + current);
-	count++
+	count++;
 	return (count);
 }
 
@@ -128,7 +128,7 @@ void remove_comments(char *buf)
 	int i;
 
 	for (i = 0; buf[i] != '\0'; i++)
-	if (buf[i] == '#' && (!i || buf[i - 1] == ''))
+	if (buf[i] == '#' && (!i || buf[i - 1] == ' '))
 	{
 	buf[i] = '\0';
 	break;
