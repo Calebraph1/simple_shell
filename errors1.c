@@ -132,9 +132,23 @@ void remove_comments(char *buf)
 	int i;
 
 	for (i = 0; buf[i] != '\0'; i++)
+<<<<<<< HEAD
 		if (buf[i] == '#' && (!i || buf[i - 1] == ' '))
 		{
 			buf[i] = '\0';
 			break;
 		}
+=======
+	void remove_comments(char *buf)
+{
+        int i;
+
+        for (i = 0; buf[i] != '\0'; i++)
+        if (buf[i] == '#' && (!i || buf[i - 1] == ''))
+        {
+        buf[i] = '\0';
+        break;
+        }
+}
+>>>>>>> 3ae5a10fa2750d4e88a5da9fbe5771fe6e508d1c
 }
