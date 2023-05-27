@@ -1,0 +1,5 @@
+($) /bin/ls
+hsh main.c shell.c
+($)
+($) exit
+
